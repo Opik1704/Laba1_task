@@ -1,7 +1,7 @@
 import json
 from typing import List
 
-from Laba1_task.src import Task
+from Laba1_task.src.Task import Task
 from Laba1_task.src.TaskSource import TaskSource
 
 
@@ -10,14 +10,20 @@ class FileTaskSource(TaskSource):
     Читает задачи из Json файла
     """
     def __init__(self, filename):
-        self.filePath = filename
+        self.filename = filename
+
     def get_tasks(self) -> List[Task]:
+        """
+        Читает задачи из JSON файла и преобразует их в объекты Task
+        Returns:
+            List[Task]: Список задач из файла или пустой список в случае ошибки
+        """
         try:
-            with open(self.filePath, "r", encoding="utf-8") as f:
+            with open(self.filename, "r", encoding="utf-8") as f:
                 data = json.load(f)
                 return [Task(id=item["id"],payload = item['payload']) for item in data]
         except FileNotFoundError:
-            print("Файл")
+            print("Файл не найден")
             return []
         except json.JSONDecodeError:
             print("Файл не формата JSON")

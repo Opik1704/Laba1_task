@@ -1,20 +1,34 @@
-from src.power import power_function
-from src.constants import SAMPLE_CONSTANT
+from typing import List
+from Laba1_task.src.Task import Task
+from Laba1_task.src.TaskSource import TaskSource
+from Laba1_task.src.FileTaskSource import FileTaskSource
+from Laba1_task.src.GeneratorTaskSource import GeneratorTaskSource
+from Laba1_task.src.APITaskSource import APITaskSource
+import json
 
+def main():
+    """Вход в приложение и получение tasks"""
+    tasks = [
+        {"id": "task_5", "payload": {"user_id": 1, "action": "fifth"}},
+        {"id": "task_6", "payload": {"user_id": 2, "action": "sixth", }},
+        {"id": "task_7", "payload": {"user_id": 3, "action": "seventh",}}
+    ]
+    with open("tasks.json", "w", encoding="utf-8") as f:
+        json.dump(tasks, f)
 
-def main() -> None:
-    """
-    Обязательнная составляющая программ, которые сдаются. Является точкой входа в приложение
-    :return: Данная функция ничего не возвращает
-    """
+    task_source = [
+        FileTaskSource("tasks.json"),
+        GeneratorTaskSource(5),
+        APITaskSource()
+    ]
 
-    target, degree = map(int, input("Введите два числа разделенные пробелом: ").split(" "))
-
-    result = power_function(target=target, power=degree)
-
-    print(result)
-
-    print(SAMPLE_CONSTANT)
+    all_tasks = []
+    for task in task_source:
+        if isinstance(task, TaskSource):
+            tasks = task.get_tasks()
+            all_tasks.extend(tasks)
+    for task in all_tasks:
+        print(task)
 
 if __name__ == "__main__":
     main()

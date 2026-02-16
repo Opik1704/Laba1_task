@@ -3,6 +3,9 @@ from  typing import *
 
 @runtime_checkable
 class TaskSource(Protocol):
-    def get_task(self) -> List[Task]:
+    """
+    Протокол определяющий контракт для всех источников задач
+    """
+    def get_tasks(self) -> List[Task]:
         ...
 

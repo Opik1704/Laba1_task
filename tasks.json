@@ -1,0 +1,23 @@
+[
+    {
+        "id": "task1",
+        "payload": {
+            "user_id": 41,
+            "action": "first"
+        }
+    },
+    {
+        "id": "task2",
+        "payload": {
+            "user_id": 42,
+            "action": "second"
+        }
+    },
+    {
+        "id": "task3",
+        "payload": {
+            "user_id": 45,
+            "action": "third"
+        }
+    }
+]

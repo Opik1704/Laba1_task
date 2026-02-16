@@ -1,7 +1,7 @@
 from typing import List
 import random
 
-from Laba1_task.src import Task
+from Laba1_task.src.Task import Task
 from Laba1_task.src.TaskSource import TaskSource
 
 
@@ -10,16 +10,17 @@ class GeneratorTaskSource(TaskSource):
         self.count = count
     def get_tasks(self) -> List[Task]:
         """
-        Генерирует указанное количество задач.
-        """
+           Генерирует указанное количество задач
+           Returns:
+               List[Task]: Список сгенерированных задач
+           """
         tasks = []
-        actions = ["first", "second", "third", "fourth", "fifth", "update", "delete", "create"]
         for i in range(self.count):
             task= Task(
                 id=f"task_{random.randint(1000, 9999)}",
                 payload={
                     "user_id": random.randint(1, 100),
-                    "action": random.choice(["first", "second", "third", "delete", "update"])
+                    "action": random.choice(["first", "second", "third", "fourth", "fifth", "sixth", "seventh"])
                 }
             )
             tasks.append(task)
