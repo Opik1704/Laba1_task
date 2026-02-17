@@ -26,7 +26,7 @@ Labal_1
  ├── tasks.json 
  └── uv.lock
   </pre>
-#Контракт описан с помощью typing.Protocol 
+Контракт описан с помощью typing.Protocol 
 ## Установка 
  ```bash
  $ python -m venv venv
