@@ -7,7 +7,7 @@ class APITaskSource(TaskSource):
     """
     API-заглушка, имитирующая внешний источник задач
     """
-    def __init__(self, endpoint: str = "https://google.com/tasks"):
+    def __init__(self, endpoint: str = "https://google.com/tasks")->None:
         """Создание фейковых тасков которые должны передатся с апи"""
         self.endpoint = endpoint
         self.mock_data = [

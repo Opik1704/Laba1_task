@@ -6,7 +6,7 @@ from Laba1_task.src.TaskSource import TaskSource
 
 
 class GeneratorTaskSource(TaskSource):
-    def __init__(self, count):
+    def __init__(self, count:int) -> None:
         self.count = count
     def get_tasks(self) -> List[Task]:
         """

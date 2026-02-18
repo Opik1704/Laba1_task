@@ -9,7 +9,7 @@ class FileTaskSource(TaskSource):
     """
     Читает задачи из Json файла
     """
-    def __init__(self, filename):
+    def __init__(self, filename:str)->None:
         self.filename = filename
 
     def get_tasks(self) -> List[Task]:

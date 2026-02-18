@@ -30,5 +30,20 @@ def main():
     for task in all_tasks:
         print(task)
 
+    classes = [
+        FileTaskSource,
+        GeneratorTaskSource,
+        APITaskSource,
+        str,
+        int,
+        list,
+        dict
+    ]
+    for cls in classes:
+        if issubclass(cls, TaskSource):
+            print(cls.__name__,"Реализует контракт TaskSource")
+        else:
+            print(cls.__name__," НЕ реализует контракт TaskSource")
+
 if __name__ == "__main__":
     main()
