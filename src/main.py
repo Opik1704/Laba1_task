@@ -20,6 +20,7 @@ def main():
         FileTaskSource("tasks.json"),
         GeneratorTaskSource(5),
         APITaskSource()
+
     ]
 
     all_tasks = []
