@@ -173,6 +173,7 @@ class TestIntegration(unittest.TestCase):
         self.assertGreaterEqual(len(all_tasks), 0)
         for task in all_tasks:
             self.assertIsInstance(task, Task)
+
     def test_runtime(self):
         """ runtime-проверка"""
         sources = [
