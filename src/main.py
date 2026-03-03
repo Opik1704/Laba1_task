@@ -47,6 +47,7 @@ def main():
             print(cls.__name__," НЕ реализует контракт TaskSource")
     print("a")
     print("b")
+    print("c")
 
 if __name__ == "__main__":
     main()
