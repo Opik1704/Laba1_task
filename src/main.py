@@ -1,4 +1,3 @@
-from typing import List
 from Laba1_task.src.Task import Task
 from Laba1_task.src.TaskSource import TaskSource
 from Laba1_task.src.FileTaskSource import FileTaskSource
