@@ -1,7 +1,7 @@
 from typing import List
 
-from Laba1_task.src.TaskSource import TaskSource
-from Laba1_task.src.Task import Task
+from Laba2_task.src.TaskSource import TaskSource
+from Laba2_task.src.Task import Task
 
 class APITaskSource(TaskSource):
     """
