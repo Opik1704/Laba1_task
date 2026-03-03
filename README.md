@@ -1,4 +1,4 @@
-# Лабораторная работа №2
+# Лабораторная работа №1
 <img width="622" height="197" alt="image" src="https://github.com/user-attachments/assets/4305ed0e-edfb-4ec4-96b8-1b223525a333" />
 
 ## Подсистема приёма задач
