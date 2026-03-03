@@ -48,6 +48,8 @@ def main():
     print("a")
     print("b")
     print("c")
+    print("c")
+
 
 if __name__ == "__main__":
     main()
