@@ -1,8 +1,8 @@
 import json
 from typing import List
 
-from Laba2_task.src.Task import Task
-from Laba2_task.src.TaskSource import TaskSource
+from Laba1_task.src.Task import Task
+from Laba1_task.src.TaskSource import TaskSource
 
 
 class FileTaskSource(TaskSource):
