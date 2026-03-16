@@ -3,11 +3,11 @@ import json
 import tempfile
 from typing import List
 
-from Laba2_task.src.Task import Task
-from Laba2_task.src.TaskSource import TaskSource
-from Laba2_task.src.FileTaskSource import FileTaskSource
-from Laba2_task.src.GeneratorTaskSource import GeneratorTaskSource
-from Laba2_task.src.APITaskSource import APITaskSource
+from Laba1_task.src.Task import Task
+from Laba1_task.src.TaskSource import TaskSource
+from Laba1_task.src.FileTaskSource import FileTaskSource
+from Laba1_task.src.GeneratorTaskSource import GeneratorTaskSource
+from Laba1_task.src.APITaskSource import APITaskSource
 
 class TestTask(unittest.TestCase):
     """Тесты TestTask"""
